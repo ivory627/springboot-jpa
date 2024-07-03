@@ -24,6 +24,7 @@ public class Member {
     private Address address;
 
     //@JsonIgnore : DTO 활용할것, 하나의 엔티티로 다양한 api가 개발되므로 화면에 종속적이면 안된다.
+    @JsonIgnore
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
 }
